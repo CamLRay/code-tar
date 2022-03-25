@@ -1,14 +1,20 @@
 body {
   margin-top: 5vh;
   background-image: url("../img/background.png");
-  color: rgb(178, 134, 219);
+  color: rgb(129, 17, 233);
 }
 .container {
   background-color: rgba(0, 0, 0, 0.726);
-  width: 80vmin;
   padding: 3vmin;
   text-align: center;
+}
 
+#code-tar {
+  width: 15%;
+}
+
+#quiz {
+  color: rgb(178, 134, 219);
 }
 .question img {
   width: 15vmin;
@@ -29,6 +35,8 @@ body {
 
 .question {
   display: none;
+  padding: 2vmin;
+  color: rgb(178, 134, 219);
 }
 
 .active-question {
