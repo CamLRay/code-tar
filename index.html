@@ -12,9 +12,11 @@
     <h1>Code-Tar</h1>
     <h4>The all knowing animatronic software development fortune teller.</h4>
     <form id="quiz">
-      <label for="name">Your Name:</label>
-      <input type="text" name="name" id="name" placeholder="Enter your name">
-      <div class="question active-question">
+      <div class="question active-question" id="question-start">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+      </div>
+      <div class="question">
         <p>What is your organization style?</p> 
         <input type="radio" name="question1" id="alph" value="alph">
         <label for="question1">Alphabetical</label>

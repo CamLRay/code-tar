@@ -1,3 +1,15 @@
+body {
+  margin-top: 5vh;
+  background-image: url("../img/background.png");
+  color: rgb(178, 134, 219);
+}
+.container {
+  background-color: rgba(0, 0, 0, 0.726);
+  width: 80vmin;
+  padding: 3vmin;
+  text-align: center;
+
+}
 .question img {
   width: 15vmin;
 }

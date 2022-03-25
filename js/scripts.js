@@ -53,9 +53,10 @@ $(document).ready(function() {
       $('#error').text("Must enter a name!")
     } else {
     let language = codeSelector(questOne, questTwo, questThree, questFour, questFive);
-    $("#quiz").addClass("hidden");
-    $("#retake").removeClass("hidden");
-    $("#fighter-div").removeClass("hidden");
+    // $("#quiz").addClass("hidden");
+    // $("#retake, #fighter-div").removeClass("hidden");
+    $("#quiz, #retake, #fighter-div").toggleClass("hidden");
+    $(".question").removeClass("active-question")
     $("#result-name").text(name);
     language;
     $("#result-language").text(language);
@@ -64,16 +65,18 @@ $(document).ready(function() {
   });
 
   $("#retake").click(function() {
-    $("#retake, .result").addClass("hidden");
+    $("#retake, .result, #fighter-div, .btn-submit").addClass("hidden");
     $("#quiz").removeClass("hidden");
-    $("#fighter-div").addClass("hidden");
     $("#quiz")[0].reset();
-    $('#error').text("")
+    $('#error').text("");
+    $("#question-start").addClass("active-question");
+    $(".btn-next").removeAttr("disabled");
+    $(".btn-prev").ttr("disabled", "disabled");
   });
 
   $(".btn-next").click(function() {
     $(".active-question").next(".question").toggleClass("active-question");
-    $(".active-question:first").toggleClass("active-question");
+    $(".active-question").first().toggleClass("active-question");
     $(".btn-prev").removeAttr("disabled");
 
     if ($(".active-question").next(".question").length <= 0) {
@@ -83,7 +86,7 @@ $(document).ready(function() {
   });
   $(".btn-prev").click(function() {
     $(".active-question").prev(".question").toggleClass("active-question");
-    $(".active-question:last").toggleClass("active-question");
+    $(".active-question").last().toggleClass("active-question");
     $(".btn-next").removeAttr("disabled");
 
     if ($(".active-question").prev(".question").length <= 0) {
