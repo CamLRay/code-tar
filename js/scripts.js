@@ -41,16 +41,21 @@ function fighter(qSix) {
 $(document).ready(function() {
   $("#quiz").submit(function(event) {
     event.preventDefault();
+    const name = $('#name').val();
     const questOne = $('input[name="question1"]:checked').val();
     const questTwo = $('input[name="question2"]:checked').val();
     const questThree = $('input[name="question3"]:checked').val();
     const questFour = $('input[name="question4"]:checked').val();
     const questFive = $('input[name="question5"]:checked').val();
     const questSix = $('input[name="question6"]:checked').val();
- 
+    console.log(name, questOne, questTwo, questThree, questFour, questFive, questSix)
+    if (questOne === undefined || questTwo === undefined || questThree === undefined || questFour === undefined || questFive === undefined || questSix === undefined) {
+      $('#error').text("Must select and answer for all questions!")
+    } else {
     $("#quiz").addClass("hidden");
     codeSelector(questOne, questTwo, questThree, questFour, questFive);
     fighter(questSix);
+    }
   });
  });
 
