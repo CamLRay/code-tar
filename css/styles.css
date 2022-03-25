@@ -21,9 +21,5 @@
 
 .active-question {
   display: block;
-  height: 20vmin;
 }
 
-.btn-submit {
-  float: right;
-}

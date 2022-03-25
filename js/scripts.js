@@ -77,7 +77,7 @@ $(document).ready(function() {
     $(".btn-prev").removeAttr("disabled");
 
     if ($(".active-question").next(".question").length <= 0) {
-      $(".btn-submit").toggleClass("hidden");
+      $(".btn-submit").removeClass("hidden");
       $(".btn-next").attr("disabled", "disabled");
     }
   });
