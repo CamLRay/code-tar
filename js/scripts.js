@@ -23,6 +23,21 @@ function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
   }
 } 
 
+function fighter(qSix) {
+  let fighter;
+  if (qSix === "tech") {
+    fighter = $(".result").append('<img src="img/tech-boss.png" alt="Tech support in regalia">');
+  } else if (qSix === "bread") {
+    fighter = $(".result").append('<img src="img/bread-boss.png" alt="Fast food employee holding bread like swords">');
+  } else if (qSix === "fluff") {
+    fighter = $(".result").append('<img src="img/fluff-boss.png" alt="Pillow fighter in pillow armor">');
+  } else {
+    fighter = $(".result").append('<img src="img/tooth-boss.png" alt="Dental mascot shaped as a toothbrush">');
+  }
+  return fighter;
+}
+
+
 // User Interface Logic
 $(document).ready(function() {
   $("#quiz").submit(function(event) {
@@ -36,6 +51,7 @@ $(document).ready(function() {
  
     $("#quiz").addClass("hidden");
     codeSelector(questOne, questTwo, questThree, questFour, questFive);
+    fighter(questSix);
   });
  });
 
