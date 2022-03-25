@@ -14,3 +14,16 @@
 .hidden {
   display: none;
 }
+
+.question {
+  display: none;
+}
+
+.active-question {
+  display: block;
+  height: 20vmin;
+}
+
+.btn-submit {
+  float: right;
+}

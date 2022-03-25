@@ -71,7 +71,27 @@ $(document).ready(function() {
     $('#error').text("")
   });
 
-  $(".btn-next").click() {}
+  $(".btn-next").click(function() {
+    $(".active-question").next(".question").toggleClass("active-question");
+    $(".active-question:first").toggleClass("active-question");
+    $(".btn-prev").removeAttr("disabled");
+
+    if ($(".active-question").next(".question").length <= 0) {
+      $(".btn-submit").toggleClass("hidden");
+      $(".btn-next").attr("disabled", "disabled");
+    }
+  });
+  $(".btn-prev").click(function() {
+    $(".active-question").prev(".question").toggleClass("active-question");
+    $(".active-question:last").toggleClass("active-question");
+    $(".btn-next").removeAttr("disabled");
+
+    if ($(".active-question").prev(".question").length <= 0) {
+      $(".btn-prev").attr("disabled", "disabled");
+    }
+  });
+
+  
  });
 
  function fighter(qSix) {

@@ -14,7 +14,7 @@
     <form id="quiz">
       <label for="name">Your Name:</label>
       <input type="text" name="name" id="name" placeholder="Enter your name">
-      <div class="question ">
+      <div class="question active-question">
         <p>What is your organization style?</p> 
         <input type="radio" name="question1" id="alph" value="alph">
         <label for="question1">Alphabetical</label>
@@ -25,28 +25,28 @@
         <input type="radio" name="question1" id="warz" value="warz">
         <label for="question1">Its a warzone</label>
       </div>
-      <div class="question hidden">
+      <div class="question">
         <p> Do you seek money or legacy?</p>
         <input type="radio" name="question2" id="money" value="money">
         <label for="question2">Money</label>
         <input type="radio" name="question2" id="legacy" value="legacy">
         <label for="question2">Legacy</label>
       </div>
-      <div class="question hidden">
+      <div class="question">
         <p>What is your training style?</p>
         <input type="radio" name="question3" id="micro" value="micro">
         <label for="question3">Micromanage</label>
         <input type="radio" name="question3" id="manual" value="manual">
         <label for="question3">Instruction Manual</label>
       </div>
-      <div class="question hidden">
+      <div class="question">
         <p>Are you a Mac or PC?</p>
         <input type="radio" name="question4" id="mac" value="mac">
         <label for="question4">Mac</label>
         <input type="radio" name="question4" id="pc" value="pc">
         <label for="question4">PC</label>
       </div>
-      <div class="question hidden">
+      <div class="question">
         <p>How would you describe software development?</p>
         <input type="radio" name="question5" id="science" value="science">
         <label for="question5">Its a science</label>
@@ -57,7 +57,7 @@
         <input type="radio" name="question5" id="soul" value="soul">
         <label for="question5">Its soulless</label>
       </div>
-      <div class="question hidden">
+      <div class="question">
         <p>Choose your fighter!</p>
         <input type="radio" name="question6" id="tech" value="tech">
         <label for="question6"><img src="img/tech-boss.png" alt="Tech support in regalia"></label>
@@ -68,10 +68,11 @@
         <input type="radio" name="question6" id="brush" value="brush">
         <label for="question6"><img src="img/tooth-boss.png" alt="Dental mascot shaped as a toothbrush"></label>
       </div>
-      <button class=".btn-next">Next question</button>
-      <button type="submit">Submit Quiz</button>
+      <button type="submit" class="btn-submit hidden">Submit Quiz</button>
       <p id="error" class="text-danger"></p>
     </form>
+      <button class="btn-prev" disabled>Previous question</button>
+      <button class="btn-next">Next question</button>
       <button id="retake" class="hidden">Retake the Quiz</button>
 
       <div id="java" class="hidden result">
