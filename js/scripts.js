@@ -8,6 +8,7 @@ $(document).ready(function() {
    const questFive = $('input[name="question5"]:checked').val();
    const questSix = $('input[name="question6"]:checked').val();
    
+   codeSelector(questOne, questTwo, questThree, questFour, questFive);
  });
 
 
@@ -15,8 +16,10 @@ $(document).ready(function() {
 });
 
 function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
-  if(qTwo === "money") {
+  if(qTwo === "money" && qOne !== "warz") {
     cPlusPlus();
+  } else if(qTwo === "money" && qOne === "warz") {
+    php();
   } else if (qTwo === "legacy" && qFour === "mac" && qFive === "science") {
     java();
   } else if (qTwo === "legacy" && qFour === "mac" && qFive === "soul") {
@@ -27,6 +30,12 @@ function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
     python();
   } else if (qTwo === "legacy" && qFive === "rock") {
     rockstar();
+  } else if (qTwo === "legacy" && qThree === "micro") {
+    javaScript();
+  } else if (qTwo === "legacy" && qFive === "art") {
+    piet();
+  } else {
+    swift();
   }
 } 
 
@@ -48,10 +57,4 @@ function swift() {}
 
 function rockstar() {}
 
-//PC languages
-//cSharp, cPlusPluis
-
-//web languages
-//php javascript
-
-//
+function piet() {}
