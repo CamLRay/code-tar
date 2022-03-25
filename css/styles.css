@@ -4,4 +4,6 @@
 
 .result img {
   width: 20vmin;
+  float: left;
 }
+

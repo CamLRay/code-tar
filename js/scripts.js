@@ -21,9 +21,9 @@ function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
   } else if(qTwo === "money" && qOne === "warz") {
     php();
   } else if (qTwo === "legacy" && qFour === "mac" && qFive === "science") {
-    java();
+    ruby
   } else if (qTwo === "legacy" && qFour === "mac" && qFive === "soul") {
-    ruby();
+    swift();
   } else if (qTwo === "legacy" && qFour === "pc" & qFive === "science") {
     cSharp();
   } else if (qTwo === "legacy" && qOne === "warz") {
@@ -35,7 +35,7 @@ function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
   } else if (qTwo === "legacy" && qFive === "art") {
     piet();
   } else {
-    swift();
+    java();
   }
 } 
 
