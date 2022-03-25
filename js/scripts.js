@@ -37,7 +37,6 @@ function fighter(qSix) {
   return fighter;
 }
 
-
 // User Interface Logic
 $(document).ready(function() {
   $("#quiz").submit(function(event) {
