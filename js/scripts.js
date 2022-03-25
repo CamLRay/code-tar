@@ -1,20 +1,4 @@
-$(document).ready(function() {
- $("#quiz").submit(function(event) {
-   event.preventDefault();
-   const questOne = $('input[name="question1"]:checked').val();
-   const questTwo = $('input[name="question2"]:checked').val();
-   const questThree = $('input[name="question3"]:checked').val();
-   const questFour = $('input[name="question4"]:checked').val();
-   const questFive = $('input[name="question5"]:checked').val();
-   const questSix = $('input[name="question6"]:checked').val();
-   
-   codeSelector(questOne, questTwo, questThree, questFour, questFive);
- });
-
-
-
-});
-
+// Business Logic
 function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
   if(qTwo === "money" && qOne !== "warz") {
     cPlusPlus();
@@ -39,22 +23,59 @@ function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
   }
 } 
 
-function cPlusPlus() {}
+// User Interface Logic
+$(document).ready(function() {
+  $("#quiz").submit(function(event) {
+    event.preventDefault();
+    const questOne = $('input[name="question1"]:checked').val();
+    const questTwo = $('input[name="question2"]:checked').val();
+    const questThree = $('input[name="question3"]:checked').val();
+    const questFour = $('input[name="question4"]:checked').val();
+    const questFive = $('input[name="question5"]:checked').val();
+    const questSix = $('input[name="question6"]:checked').val();
+ 
+    $("#quiz").addClass("hidden");
+    codeSelector(questOne, questTwo, questThree, questFour, questFive);
+  });
+ });
 
-function cSharp() {}
 
-function java() {}
+function cPlusPlus(fighter) {
+  $("#cPlusPlus").removeClass("hidden");
+}
 
-function javaScript() {}
+function cSharp(fighter) {
+  $("#cSharp").removeClass("hidden");
+}
 
-function php() {}
+function java(fighter) {
+  $("#java").removeClass("hidden");
+}
 
-function python() {}
+function javaScript(fighter) {
+  $("#javaScript").removeClass("hidden");
+}
 
-function ruby() {}
+function php(fighter) {
+  $("#php").removeClass("hidden");
+}
 
-function swift() {}
+function python(fighter) {
+  $("#python").removeClass("hidden");
+}
 
-function rockstar() {}
+function ruby(fighter) {
+  $("#ruby").removeClass("hidden");
+}
 
-function piet() {}
+function swift(fighter) {
+  $("#swift").removeClass("hidden");
+}
+
+function rockstar(fighter) {
+  $("#rockstar").removeClass("hidden");
+}
+
+function piet(fighter) {
+  $("#piet").removeClass("hidden");
+}

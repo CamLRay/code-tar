@@ -7,3 +7,6 @@
   float: left;
 }
 
+.hidden {
+  display: none;
+}
