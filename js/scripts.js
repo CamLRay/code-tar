@@ -35,20 +35,6 @@ function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
   return language;
 } 
 
-function fighter(qSix) {
-  let fighter;
-  if (qSix === "tech") {
-    fighter = $("#fighter-image").attr('src', 'img/tech-boss.png');
-  } else if (qSix === "bread") {
-    fighter = $("#fighter-image").attr('src', 'img/bread-boss.png');
-  } else if (qSix === "fluff") {
-    fighter = $("#fighter-image").attr('src', 'img/fluff-boss.png');
-  } else {
-    fighter = $("#fighter-image").attr('src', 'img/tooth-boss.png');
-  }
-  return fighter;
-}
-
 // User Interface Logic
 $(document).ready(function() {
   $("#quiz").submit(function(event) {
@@ -84,8 +70,23 @@ $(document).ready(function() {
     $("#quiz")[0].reset();
     $('#error').text("")
   });
+
+  $(".btn-next").click() {}
  });
 
+ function fighter(qSix) {
+  let fighter;
+  if (qSix === "tech") {
+    fighter = $("#fighter-image").attr('src', 'img/tech-boss.png');
+  } else if (qSix === "bread") {
+    fighter = $("#fighter-image").attr('src', 'img/bread-boss.png');
+  } else if (qSix === "fluff") {
+    fighter = $("#fighter-image").attr('src', 'img/fluff-boss.png');
+  } else {
+    fighter = $("#fighter-image").attr('src', 'img/tooth-boss.png');
+  }
+  return fighter;
+}
 
 function cPlusPlus() {
   $("#cPlusPlus").removeClass("hidden");
