@@ -26,13 +26,13 @@ function codeSelector(qOne, qTwo, qThree, qFour, qFive) {
 function fighter(qSix) {
   let fighter;
   if (qSix === "tech") {
-    fighter = $(".result").append('<img src="img/tech-boss.png" alt="Tech support in regalia">');
+    fighter = $(".fighter-image").attr('src', 'img/tech-boss.png');
   } else if (qSix === "bread") {
-    fighter = $(".result").append('<img src="img/bread-boss.png" alt="Fast food employee holding bread like swords">');
+    fighter = $(".fighter-image").attr('src', 'img/bread-boss.png');
   } else if (qSix === "fluff") {
-    fighter = $(".result").append('<img src="img/fluff-boss.png" alt="Pillow fighter in pillow armor">');
+    fighter = $(".fighter-image").attr('src', 'img/fluff-boss.png');
   } else {
-    fighter = $(".result").append('<img src="img/tooth-boss.png" alt="Dental mascot shaped as a toothbrush">');
+    fighter = $(".fighter-image").attr('src', 'img/tooth-boss.png');
   }
   return fighter;
 }
@@ -50,19 +50,20 @@ $(document).ready(function() {
     const questSix = $('input[name="question6"]:checked').val();
     console.log(name, questOne, questTwo, questThree, questFour, questFive, questSix)
     if (questOne === undefined || questTwo === undefined || questThree === undefined || questFour === undefined || questFive === undefined || questSix === undefined) {
-      $('#error').text("Must select and answer for all questions!")
+      $('#error').text("Must select and answer for all questions!");
     } else {
     $("#quiz").addClass("hidden");
     $("#retake").removeClass("hidden");
+    $(".fighter-image").removeClass("hidden");
     codeSelector(questOne, questTwo, questThree, questFour, questFive);
     fighter(questSix);
     }
   });
 
   $("#retake").click(function() {
-    $("#retake, .result").addClass("hidden")
-    $("#quiz").removeClass("hidden")
-    
+    $("#retake, .result").addClass("hidden");
+    $("#quiz").removeClass("hidden");
+    $(".fighter-image").addClass("hidden");
   });
  });
 

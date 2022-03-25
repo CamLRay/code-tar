@@ -7,6 +7,10 @@
   float: left;
 }
 
+.fighter-image {
+  width: 20vmin;
+}
+
 .hidden {
   display: none;
 }
