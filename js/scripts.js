@@ -53,9 +53,16 @@ $(document).ready(function() {
       $('#error').text("Must select and answer for all questions!")
     } else {
     $("#quiz").addClass("hidden");
+    $("#retake").removeClass("hidden");
     codeSelector(questOne, questTwo, questThree, questFour, questFive);
     fighter(questSix);
     }
+  });
+
+  $("#retake").click(function() {
+    $("#retake, .result").addClass("hidden")
+    $("#quiz").removeClass("hidden")
+    
   });
  });
 
