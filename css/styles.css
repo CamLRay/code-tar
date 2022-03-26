@@ -28,7 +28,11 @@ body {
 #fighter-div img {
   width: 20vmin;
 }
-
+.retake {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
 .hidden {
   display: none;
 }
@@ -42,4 +46,3 @@ body {
 .active-question {
   display: block;
 }
-

@@ -53,9 +53,7 @@ $(document).ready(function() {
       $('#error').text("Must enter a name!")
     } else {
     let language = codeSelector(questOne, questTwo, questThree, questFour, questFive);
-    // $("#quiz").addClass("hidden");
-    // $("#retake, #fighter-div").removeClass("hidden");
-    $("#quiz, #retake, #fighter-div").toggleClass("hidden");
+    $("#quiz, .retake, #fighter-div").toggleClass("hidden");
     $(".question").removeClass("active-question")
     $("#result-name").text(name);
     language;
@@ -64,8 +62,8 @@ $(document).ready(function() {
     }
   });
 
-  $("#retake").click(function() {
-    $("#retake, .result, #fighter-div, .btn-submit").addClass("hidden");
+  $(".retake").click(function() {
+    $(".retake, .result, #fighter-div, .btn-submit").addClass("hidden");
     $("#quiz").removeClass("hidden");
     $("#quiz")[0].reset();
     $('#error').text("");
