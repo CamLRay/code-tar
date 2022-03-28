@@ -1,7 +1,7 @@
 body {
   margin-top: 5vh;
   background-image: url("../img/background.png");
-  color: rgb(129, 17, 233);
+  color: #8111e9;
 }
 .container {
   background-color: rgba(0, 0, 0, 0.726);
@@ -14,20 +14,36 @@ body {
 }
 
 #quiz {
-  color: rgb(178, 134, 219);
+  color: #b286db;
 }
 .question img {
   width: 15vmin;
+}
+
+.result {
+  color: #b286db;
+  font-size: 1.5rem;
+}
+
+.result h2 {
+  font-size: 3rem;
+  color: #b286db;
 }
 
 .result img {
   width: 20vmin;
   float: left;
 }
+#fighter-div {
+  font-size: 2rem;
+  padding: 2vw;
+  color:rgb(87, 236, 236);
+}
 
-#fighter-div img {
+#fighter-image {
   width: 20vmin;
 }
+
 .retake {
   display: block;
   margin-right: auto;
