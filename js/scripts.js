@@ -69,7 +69,7 @@ $(document).ready(function() {
     $('#error').text("");
     $("#question-start").addClass("active-question");
     $(".btn-next").removeAttr("disabled");
-    $(".btn-prev").ttr("disabled", "disabled");
+    $(".btn-prev").attr("disabled", "disabled");
   });
 
   $(".btn-next").click(function() {
